@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main  # Change this to your repository branch
+
+media_folder: "public/uploads"  # Where images/videos are stored
+public_folder: "/uploads"
+
+collections:
+  - name: "homepage"
+    label: "Homepage Content"
+    files:
+      - name: "hero_section"
+        label: "Hero Section"
+        file: "src/content/hero.json"
+        fields:
+           - { name: "title", label: "Title", widget: "string" }
+           - { name: "subtitle", label: "Subtitle", widget: "string" }
+           - { name: "background_image", label: "Background Image", widget: "image" }
+      
+      # - name: "about_section"
+      #   label: "About Section"
+      #   file: "src/content/about.json"
+      #   fields:
+      #     - { name: "heading", label: "Heading", widget: "string" }
+      #     - { name: "description", label: "Description", widget: "text" }
+      #     - { name: "video_url", label: "Video URL", widget: "string" }
+      
+      # - name: "services"
+      #   label: "Services"
+      #   file: "src/content/services.json"
+      #   fields:
+      #     - { name: "title", label: "Title", widget: "string" }
+      #     - label: "Service List"
+      #       name: "services_list"
+      #       widget: "list"
+      #       fields:
+      #         - { name: "name", label: "Service Name", widget: "string" }
+      #         - { name: "image", label: "Image", widget: "image" }
