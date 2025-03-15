@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { fetchContent } from './../utils/fetchContent';
 
 export default function Navbar() {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState({ title: "", subtitle: "" });
     useEffect(() => {
         fetchContent("hero.json").then(setData);
     },[])
